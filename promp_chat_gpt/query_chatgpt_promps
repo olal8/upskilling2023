@@ -1,0 +1,175 @@
+query chatGP
+
+PROMPS
+
+Recomiendame un temario para certificarme en java 11
+Recomiendame libros de certificacion de java 11, de la siguiente lista de temas, delimitadas por triples comillas:
+'''
+Java Stream API y Lambdas
+Nuevas Características de Java 11
+Diseño Avanzado y Patrones de Diseño
+Programación Concurrente Avanzada
+'''
+
+Entrega los resultados con el siguiente formato, delimitado por triples comillas simples 
+'''
+Título:[Titulo del libro]
+Autor:[Autores]
+Editorial:[Editorial]
+
+'''
+Separa  cada respuesta con un salto de linea
+
+Rolplay
+
+Eres un desarrollador de software, que se dedica a programar en el lenguaje java con un expertis junior 
+Recomiendame libros de certificacion de java 11, de la siguiente lista de temas, delimitadas por triples comillas:
+'''
+Java Stream API y Lambdas
+Nuevas Características de Java 11
+Diseño Avanzado y Patrones de Diseño
+Programación Concurrente Avanzada
+'''
+
+Entrega los resultados con el siguiente formato, delimitado por triples comillas simples 
+'''
+Título:[Titulo del libro]
+Descripcion:[Introduccion del libro en aproximadamente 100 palabras]
+Autor:[Autores]
+Editorial:[Editorial]
+Tiempo de lectura:[Tiempo aproximado de lectura]
+numero de paginas:[numero de paginas]
+
+'''
+Separa  cada respuesta con un salto de linea
+
+De la lista anterior dime el numero de ejercicios practicos de cada libro
+
+
+De la lista anterior de libros recomiendame videos o articulos de internet
+
+
+
+
+Trabajando con un articulo
+
+Elabora un resumen de menos de 500 palabras sobre el siguiente texto, delimitado por triples comillas:
+
+'''
+
+¿Qué es la concurrencia? Es la capacidad de hacer más de una cosa al mismo tiempo.
+
+Es un concepto a priori sencillo. A menudo a los desarrolladores de software se nos presenta el problema de, más allá de conseguir que una aplicación funcione correctamente, que lo haga de manera más rápida para satisfacer los requisitos del cliente. En su día ese fue mi caso, y quiero compartir ciertas nociones básicas sobre la concurrencia en Java, de una manera práctica y basada en ejemplos, que pueda servir como guía inicial.
+
+Para introducirnos en el tema conviene diferenciar los conceptos de concurrencia y paralelismo. Concurrencia se da cuando dos o más tareas se desarrollan en el mismo intervalo de tiempo, pero que no necesariamente están progresando en el mismo instante. Es un concepto más general que el paralelismo, el cual consiste en llevar a cabo multitareas en el mismo instante literalmente.
+
+Existen dos conceptos básicos asociados a la concurrencia:
+
+Proceso: es un programa en ejecución. Tiene su propio espacio de memoria, enlaces a recursos, I/O... Los procesos están aislados entre sí.
+Hilo: es un camino de ejecución dentro de un proceso. Cada proceso tiene al menos un hilo, llamado hilo principal. Los hilos comparten los recursos del proceso, incluida la memoria, por lo que pueden comunicarse entre sí. Cada hilo tiene su propia callstack.
+Los agentes que ejecutan dichos procesos e hilos son los procesadores (CPU).
+
+Una vez que hemos decidido optimizar nuestro programa mediante concurrencia, y aunque no es estrictamente obligatorio conocer el nivel de paralelismo máximo que ofrece la máquina para la cual desarrollamos, es muy importante para hacer previsiones de optimización o para contrastar los resultados en pruebas.
+
+Cada placa base de una computadora dispone de uno o varios sockets donde insertar procesadores. El número de “cores” o procesadores físicos puede ser uno o varios. Si nuestro equipo tiene un socket y n cores, significaría que se podrían ejecutarse literalmente n procesos realmente en paralelo. Más adelante explicaremos un matiz a esta afirmación. Por otro lado, existe una tecnología que permite que un procesador físico se convierta en dos procesadores lógicos. A efectos prácticos el sistema operativo cree que dispone el doble de procesadores. A nivel de rendimiento esta tecnología que “engaña” al SO no iguala la potencia real de dos procesadores físicos.
+
+'''
+
+
+Del texto principal extrae los diez puntos mas importantes
+
+Eres un  programador, elabora  un texto de 500 palabras sobre el punto numero 3
+
+Con base en el texto anterior elabora 10 preguntas de examen con sus respectivas respuestas
+
+
+
+Con base en el siguiente texto  delimitado por tres comillas simples:
+'''
+La Diferencia Crucial entre Concurrencia y Paralelismo en Programación
+
+En el mundo de la programación y la informática, dos términos que a menudo generan confusión son la "concurrencia" y el "paralelismo". Ambos conceptos están relacionados con la ejecución simultánea de tareas, pero tienen diferencias fundamentales en su significado y aplicación.
+
+La Concurrencia
+
+La concurrencia se refiere a la capacidad de un sistema o programa para manejar múltiples tareas en el mismo intervalo de tiempo. En otras palabras, en un entorno concurrente, varias tareas se pueden iniciar, ejecutar y completar durante el mismo período, pero no necesariamente al mismo tiempo exacto. Esto significa que en un sistema concurrente, las tareas pueden intercalarse y ejecutarse en orden secuencial o incluso de manera simultánea, dependiendo de varios factores, como la disponibilidad de recursos y la programación.
+
+Para comprender mejor la concurrencia, imagine una cafetería con un solo barista que atiende a varios clientes. Aunque cada cliente puede hacer su pedido en cualquier momento, el barista puede manejar múltiples pedidos al mismo tiempo, tomando uno, haciendo un poco de trabajo en él, luego pasando al siguiente. Esto es un ejemplo de concurrencia: múltiples tareas que se ejecutan en el mismo intervalo de tiempo, pero no al mismo tiempo exacto.
+
+El Paralelismo
+
+En contraste, el paralelismo implica la ejecución literalmente simultánea de múltiples tareas en múltiples núcleos de CPU o procesadores independientes. En un sistema paralelo, las tareas se dividen en subprocesos independientes que se ejecutan al mismo tiempo. Cada subproceso se ejecuta en su propio núcleo de CPU, permitiendo una verdadera simultaneidad en la ejecución.
+
+Para entender el paralelismo, imagine una fábrica de automóviles con varias estaciones de ensamblaje, cada una trabajando en una parte diferente del automóvil al mismo tiempo. Cada estación de trabajo tiene su propio equipo y opera de manera independiente. Esto es un ejemplo de paralelismo: múltiples tareas que se ejecutan de manera completamente simultánea, lo que acelera significativamente la producción.
+
+La Importancia de Distinguir entre Concurrencia y Paralelismo
+
+Es crucial comprender la diferencia entre concurrencia y paralelismo en la programación, ya que esto tiene un impacto significativo en cómo diseñamos y optimizamos sistemas y aplicaciones. Aquí hay algunas consideraciones clave:
+
+Rendimiento: El paralelismo tiende a ofrecer un mejor rendimiento en tareas que se pueden dividir en subprocesos independientes y ejecutar en múltiples núcleos de CPU. La concurrencia, por otro lado, es útil cuando las tareas no pueden dividirse fácilmente en subprocesos independientes.
+
+Sincronización: En sistemas concurrentes, es necesario gestionar la sincronización entre tareas para evitar problemas como las condiciones de carrera y la incoherencia de datos. En sistemas paralelos, la sincronización suele ser menos compleja, ya que los subprocesos operan de manera independiente.
+
+Recursos: El paralelismo requiere hardware específico, como múltiples núcleos de CPU, para lograr un aumento real en el rendimiento. La concurrencia puede ser más fácil de implementar en sistemas con recursos limitados.
+
+Escalabilidad: El paralelismo es fundamental para lograr una escalabilidad eficiente en aplicaciones que deben manejar cargas de trabajo muy grandes. La concurrencia es útil en situaciones donde se necesita administrar múltiples tareas, pero la escalabilidad puede no ser tan crítica.
+
+Complejidad: La programación concurrente puede ser más compleja debido a la necesidad de lidiar con problemas de sincronización. El paralelismo, en cambio, puede simplificar la programación al dividir las tareas en subprocesos independientes.
+
+En resumen, aunque los términos "concurrencia" y "paralelismo" a menudo se usan indistintamente, es fundamental comprender su diferencia. La elección entre uno u otro depende de los requisitos de rendimiento, la arquitectura de hardware y la naturaleza de las tareas que se están realizando. Ambos conceptos son herramientas poderosas en la programación moderna y deben utilizarse de manera estratégica para optimizar el rendimiento y la eficiencia de las aplicaciones y sistemas.
+
+
+'''
+Elabora un examen de 10 preguntas de opcion multiple , con el siguiente formato delimitado por tres comillas simples:
+'''
+Pregunta:[cuerpo de la pregunta]
+A:[Opcion con maximo de 50 palabras aproximadamente de longitud]
+B:[Opcion con maximo de 50 palabras aproximadamente de longitud]
+C:[Opcion con maximo de 50 palabras aproximadamente de longitud]
+D:[Opcion con maximo de 50 palabras aproximadamente de longitud]
+
+Respuesta Correcta: <Letra correspondiente a la respuesta correcta>
+'''
+
+
+Con base en el siguiente comentario, delimitado por tres comillas simples :
+'''
+Me acabo de sacar la certificación de Java SE 11 y quisiera compartir mis impresiones y experiencia personal acerca del proceso que he llevado a cabo. En general, me ha resultado una certificación complicada. Estoy también certificado en Java 5, una versión ya bastante antigua por lo que cuando mis compañeros de trabajo en Kairos DS me propusieron apuntarnos a un curso para obtener la certificación en Java 11, me pareció una buena oportunidad para actualizar mi anterior certificación. Esto fue en Febrero de 2020.
+
+Además estoy intentando expandir mis conocimientos a otras areas como machine learning o cloud computing por lo que en ese momento estaba más centrado en la certificación de AWS Machine Learning. Este tema modificó un poco mis planes por lo que tuve que aparcar temporalmente lo de la certificación de AWS.
+
+Para obtener la certificación de Java 11 es necesario aprobar dos exámenes. Cada uno de ellos contiene 80 preguntas y un tiempo máximo de 3 horas. Para aprobar hay que acertar al menos el 63%.
+Java SE 11 Programmer I: 1Z0-815
+
+Existen varias opciones: o preparar el examen uno mismo o buscarse algún programa de preparación del examen. Mis compañeros me propusieron uno llamado Java SE Programming MOOC (Massive Open Online Courses) ofrecido por la Oracle University. Por el precio parecía que merecía la pena ya que hay que tener en cuenta que sólo el derecho a hacer el 1Z0-815 son casi 300€. Este programa es un poco más caro e incluye el curso de preparación y el examen en sí, además si se suspende se puede uno volver a presentar gratis.
+
+El curso dura seis semanas y la verdad es que después de haberlo realizado tanto mis compañeros como yo mismo hemos acabado bastante decepcionados ya que nos ha parecido demasiado básico y que no ayuda realmente a la preparación del examen. Lo que hice entonces fue apuntarme a un curso online en la plataforma Udemy y comprar unos exámenes para practicar en Whizlabs. Creo que es un buen enfoque ya que aprendes el temario específico y posteriormente puedes comenzar a hacer exámenes de prueba, que dan una idea bastante buena de cómo será el examen.
+
+La semana antes del examen fue algo frustrante ya que no era capaz de mejorar los resultados de los tests. Me considero un senior developer, pero incluso para mí era complicado ya que tienes que refrescar muchos conceptos. Hoy en día existen un montón de ayudas por lo que si tienes algún error en el código tu IDE te lo va a decir. El examen vuelve a los inicios, es necesario saber si un fragmento de código está bien o mal, muchas cosas sobre primitivas, la linea de comando, etc...
+
+De todas formas creo que todo esto al final tiene sentido ya que si quieres obtener la certificación en Java deberías saber también lo básico de Java y cómo funciona por detrás.
+
+Hice el examen en Abril de 2020 y obtuve un 70%, no está mal!
+
+
+
+Java SE 11 Programmer II: 1Z0-816
+
+Después del primer examen, empecé a preparar el segundo. En este se cubren características más avanzadas como Streams, Interfaces Funcionales, Genéricos, Concurrencia, Módulos, Ficheros, Colecciones, Serialización, etc...
+
+Afortunadamente, he trabajado ya en varios proyectos con Java 8+ por lo que conozco todos estos conceptos pero aún así prefería no pecar de exceso de confianza así que tomé la misma estrategia: cursos online y exámenes de prueba.
+
+Nada más empezar me di cuenta de que, a diferencia con el anterior examen, para este no hay muchos recursos online disponibles (a Julio de 2020)... lo poco que encontré fueron exámenes de prueba así que tuve que prepararme cada uno de los temas de forma un poco manual. Para ello usé como guía estas dos páginas:
+
+Oracle Education: sitio oficial.
+Enthuware
+Y los examenes los compré en Enthuware y Whizlabs. De estos dos recomiendo el primero ya que tiene mejores explicaciones y atención al cliente. Encontré algunos errores en Whizlabs relacionados con la sintaxis de genéricos ya que no aparecía correctamente, lo reporté y todavía estoy esperando su respuesta.
+
+La semana antes del examen, mismas sensaciones, agobiado y tratando de cubrir todos los conceptos. Hay que tener un muy buen conocimiento del API de Java y es bastante complicado ya que en una situación normal se consulta el API online, pero si tu objetivo es aprobar el examen, es necesario sabérselo.
+
+Hice el examen en Julio de 2020 y obtuve un 83%, muy contento!
+'''
+
+1.- Identifica las emociones que expresa el autor en su comentario
+2.- Elabora un documento con las recomendaciones negativas que da el autor acerca de la certificacion de java 11 con una longitud minima de 100 palabras y maximo de 500 palabras
+

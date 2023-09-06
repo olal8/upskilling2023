@@ -2,8 +2,8 @@
 print("Opcion 1: Agregar \nOpcion 2: Eliminar \nOpcion 3: editar")
 def tareas():
     lista=[]
-  
     while  True:  
+        print('Tareas agregadas: ',lista)
         opcion=input('Ingresar opcion: ')
         if int(opcion)==1:
             elemento=input('Ingresa valor: ')
